@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="left"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_studentName"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="@string/studentName"
+        android:textColor="@color/colorBlack"
+        />
+
+    <EditText
+        android:id="@+id/edit_studentName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="1"
+        android:background="@drawable/edit_bg"
+        />
+
+    <TextView
+        android:id="@+id/text_studentNumber"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/text_studentName"
+        android:layout_marginTop="50dp"
+        android:text="@string/studentNumber"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        />
+
+    <EditText
+        android:id="@+id/edit_studentNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_studentName"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="135dp"
+        android:background="@drawable/edit_bg"
+        android:layout_marginRight="10dp"
+        android:maxLines="1"
+        android:inputType="phone"
+        />
+    
+    <TextView
+        android:id="@+id/text_parentName"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_studentNumber"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/parentName"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="@color/colorBlack"
+        />
+
+    <EditText
+        android:id="@+id/edit_parentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_studentNumber"
+        android:layout_marginLeft="135dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_bg"
+        />
+
+    <TextView
+        android:id="@+id/text_parentNumber"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="@string/parentNumber"
+        android:textSize="25sp"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/text_parentName"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_parentNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_bg"
+        android:layout_below="@id/edit_parentName"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginRight="10dp"
+        android:inputType="phone"
+        />
+    
+    <TextView
+        android:id="@+id/homeAddress"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_parentNumber"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/homeAdress"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        />
+
+    <include layout="@layout/title"/>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NetWork</string>
+    <string name="studentName">学生姓名</string>
+    <string name="studentNumber">学生电话</string>
+    <string name="parentName">家长姓名</string>
+    <string name="parentNumber">家长电话</string>
+    <string name="homeAdress">家庭住址</string>
+    <string name="title">信息采集</string>
+</resources>
