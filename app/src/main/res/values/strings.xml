@@ -6,4 +6,10 @@
     <string name="parentNumber">家长电话</string>
     <string name="homeAdress">家庭住址</string>
     <string name="title">信息采集</string>
+    <string name="numberHint">*你输入的电话号码有误*</string>
+    <string name="submit">提交</string>
+    <string name="button_choice">请选择</string>
+    <string name="button_submit">提交</string>
+    <string name="text_fullAdress">详细地址</string>
+    <string name="edit_fullAdress">请输入详细地址(省，市，区（县）)</string>
 </resources>

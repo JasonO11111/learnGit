@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:gravity="left"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,23 +9,26 @@
         android:id="@+id/text_studentName"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="105dp"
         android:layout_marginLeft="10dp"
         android:gravity="center"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:text="@string/studentName"
         android:textColor="@color/colorBlack"
         />
 
     <EditText
         android:id="@+id/edit_studentName"
-        android:layout_width="match_parent"
+        android:layout_width="230dp"
         android:layout_height="40dp"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="135dp"
         android:layout_marginRight="10dp"
         android:maxLines="1"
-        android:background="@drawable/edit_bg"
+        android:background="@drawable/edit_selector"
+        android:inputType="textPersonName"
+        android:maxLength="5"
+        android:hint="请输入姓名"
         />
 
     <TextView
@@ -34,48 +37,67 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_below="@id/text_studentName"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="55dp"
         android:text="@string/studentNumber"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:gravity="center"
         android:textColor="@color/colorBlack"
         />
 
     <EditText
         android:id="@+id/edit_studentNumber"
-        android:layout_width="match_parent"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/edit_studentName"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="135dp"
-        android:background="@drawable/edit_bg"
+        android:background="@drawable/edit_selector"
         android:layout_marginRight="10dp"
         android:maxLines="1"
         android:inputType="phone"
+        android:hint="请输入电话"
+        android:maxLength="11"
         />
-    
+
+    <TextView
+        android:id="@+id/text_studentNumberHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numberHint"
+        android:textColor="@color/colorRed"
+        android:layout_below="@id/edit_studentNumber"
+        android:layout_marginLeft="135dp"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        />
+
+
+
     <TextView
         android:id="@+id/text_parentName"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text_studentNumber"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="55dp"
         android:layout_marginLeft="10dp"
         android:text="@string/parentName"
         android:gravity="center"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textColor="@color/colorBlack"
         />
 
     <EditText
         android:id="@+id/edit_parentName"
-        android:layout_width="match_parent"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/edit_studentNumber"
         android:layout_marginLeft="135dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/edit_bg"
+        android:maxLines="1"
+        android:maxLength="5"
+        android:background="@drawable/edit_selector"
+        android:hint="请输入姓名"
         />
 
     <TextView
@@ -83,39 +105,121 @@
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:text="@string/parentNumber"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textColor="@color/colorBlack"
         android:gravity="center"
         android:layout_marginLeft="10dp"
         android:layout_below="@id/text_parentName"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="55dp"
         />
 
     <EditText
         android:id="@+id/edit_parentNumber"
-        android:layout_width="match_parent"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/edit_bg"
+        android:background="@drawable/edit_selector"
         android:layout_below="@id/edit_parentName"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="135dp"
         android:layout_marginRight="10dp"
         android:inputType="phone"
+        android:hint="请输入电话"
+        android:maxLength="11"
         />
+
+    <TextView
+        android:id="@+id/text_parentNumberHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numberHint"
+        android:textColor="@color/colorRed"
+        android:textSize="20sp"
+        android:layout_below="@id/text_parentNumber"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="135dp"
+        android:visibility="invisible"
+        />
+    <TextView
+        android:id="@+id/text_numberHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*学生与家长电话不能相同*"
+        android:textColor="@color/colorRed"
+        android:textSize="20sp"
+        android:layout_below="@id/text_parentNumber"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="135dp"
+        android:visibility="invisible"
+        />
+
     
     <TextView
-        android:id="@+id/homeAddress"
+        android:id="@+id/text_homeAddress"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_parentNumber"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="55dp"
         android:text="@string/homeAdress"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:gravity="center"
         android:textColor="@color/colorBlack"
         />
 
-    <include layout="@layout/title"/>
+
+    <!--<include layout="@layout/title"/>-->
+
+    <Button
+        android:id="@+id/button_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_choice"
+        android:layout_below="@id/edit_parentNumber"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_submit"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_fullAdress"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_fullAdress"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@id/text_homeAddress"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/edit_fullAdress"
+        android:layout_width="280dp"
+        android:layout_height="150dp"
+        android:hint="@string/edit_fullAdress"
+        android:layout_below="@id/button_choice"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="120dp"
+        android:background="@drawable/edit_selector"
+        />
+
+
 
 </RelativeLayout>
